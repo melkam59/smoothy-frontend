@@ -1,4 +1,4 @@
-pre-commit:
+cpre-commit:
   parallel: true
   jobs:
     - name: biome
