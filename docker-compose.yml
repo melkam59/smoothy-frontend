@@ -1,0 +1,73 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP_NAME: web
+    image: smoothy/web:latest
+    container_name: smoothy-web
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+    env_file:
+      - path: apps/web/.env
+        required: false
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    networks:
+      - smoothy
+
+  admin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP_NAME: admin
+    image: smoothy/admin:latest
+    container_name: smoothy-admin
+    restart: unless-stopped
+    ports:
+      - "3002:3000"
+    env_file:
+      - path: apps/admin/.env
+        required: false
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    networks:
+      - smoothy
+
+  vendor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP_NAME: vendor
+    image: smoothy/vendor:latest
+    container_name: smoothy-vendor
+    restart: unless-stopped
+    ports:
+      - "3003:3000"
+    env_file:
+      - path: apps/vendor/.env
+        required: false
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    networks:
+      - smoothy
+
+networks:
+  smoothy:
+    driver: bridge

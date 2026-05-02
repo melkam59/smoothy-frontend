@@ -1,0 +1,40 @@
+# Dependencies
+**/node_modules
+**/.pnp
+**/.pnp.js
+
+# Build outputs
+**/.next
+**/.turbo
+**/dist
+**/build
+**/coverage
+**/reports
+**/*.tsbuildinfo
+
+# Git & CI
+.git
+.github
+.gitignore
+
+# Editor / OS
+.vscode
+.idea
+**/.DS_Store
+**/*.swp
+
+# Local env (override at runtime)
+**/.env
+**/.env.*.local
+
+# Logs & caches
+**/*.log
+**/.cache
+**/tmp
+**/temp
+
+# Tooling we don't need at build time
+.claude
+**/lefthook-local.yml
+README.md
+**/*.md

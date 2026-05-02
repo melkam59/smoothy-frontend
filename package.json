@@ -25,7 +25,22 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "check-types": "turbo check-types",
-    "dev:web": "turbo -F web dev"
+    "test": "turbo test",
+    "test:coverage": "turbo test:coverage",
+    "dev:web": "turbo -F web dev",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "prepare": "lefthook install",
+    "docker:build": "docker compose build",
+    "docker:build:web": "docker build --build-arg APP_NAME=web -t smoothy/web:latest .",
+    "docker:build:admin": "docker build --build-arg APP_NAME=admin -t smoothy/admin:latest .",
+    "docker:build:vendor": "docker build --build-arg APP_NAME=vendor -t smoothy/vendor:latest .",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f"
   },
   "dependencies": {
     "@smoothy-fe/env": "workspace:*",
@@ -33,9 +48,16 @@
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.4.14",
     "@smoothy-fe/config": "workspace:*",
+    "@testing-library/react": "^16.3.2",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vitest/coverage-v8": "^4.1.5",
+    "jsdom": "^29.1.1",
+    "lefthook": "^2.1.6",
     "turbo": "^2.8.12",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vitest": "^4.1.5"
   },
   "packageManager": "bun@1.3.4"
 }
