@@ -1,5 +1,18 @@
 {
   "name": "@smoothy-fe/config",
   "version": "0.0.0",
-  "private": true
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./tsconfig.base.json": "./tsconfig.base.json",
+    "./vitest/node": {
+      "types": "./vitest/node.d.mts",
+      "default": "./vitest/node.mjs"
+    },
+    "./vitest/react": {
+      "types": "./vitest/react.d.mts",
+      "default": "./vitest/react.mjs"
+    },
+    "./vitest/setup": "./vitest/setup.mjs"
+  }
 }

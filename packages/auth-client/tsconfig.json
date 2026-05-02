@@ -1,0 +1,4 @@
+{
+  "extends": "@smoothy-fe/config/tsconfig.base.json",
+  "include": ["src/**/*"]
+}
