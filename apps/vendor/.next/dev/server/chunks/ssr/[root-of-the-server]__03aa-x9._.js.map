@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///home/envy/Documents/Dev/smoothy-fe/apps/vendor/src/app/page.tsx"],"sourcesContent":["export default function VendorHome() {\n  return (\n    <main className=\"container mx-auto max-w-3xl px-4 py-12\">\n      <h1 className=\"text-2xl font-semibold\">Smoothy Vendor</h1>\n      <p className=\"mt-2 text-sm text-muted-foreground\">\n        Manage your listings, bookings, calendar, and payouts.\n      </p>\n    </main>\n  );\n}\n"],"names":["VendorHome","className"],"mappings":";;;;;;AAAe,SAASA;IACtB,qBACE,mTAAC;QAAKC,WAAU;;0BACd,mTAAC;gBAAGA,WAAU;0BAAyB;;;;;;0BACvC,mTAAC;gBAAEA,WAAU;0BAAqC;;;;;;;;;;;;AAKxD"}}]
+}

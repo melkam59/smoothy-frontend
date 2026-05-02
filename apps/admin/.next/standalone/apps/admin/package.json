@@ -1,0 +1,42 @@
+{
+  "name": "admin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 3002",
+    "build": "next build",
+    "start": "next start --port 3002",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@smoothy-fe/api-client": "workspace:*",
+    "@smoothy-fe/auth-client": "workspace:*",
+    "@smoothy-fe/env": "workspace:*",
+    "@smoothy-fe/types": "workspace:*",
+    "@smoothy-fe/ui": "workspace:*",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "dotenv": "catalog:",
+    "lucide-react": "catalog:",
+    "next": "^16.2.0",
+    "next-themes": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "sonner": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@smoothy-fe/config": "workspace:*",
+    "@smoothy-fe/test-utils": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^25.6.0",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  }
+}
